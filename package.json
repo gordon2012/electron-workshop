@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "productName": "Electron Workshop",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package:osx": "electron-packager . --platform=darwin --arch=x64 --out=dist/osx",
+    "package:win64": "electron-packager . --platform=win32 --arch=x64 --out=dist/win64",
+    "package:win32": "electron-packager . --platform=win32 --arch=ia32 --out=dist/win32",
+    "package:linux": "electron-packager . --platform=linux --arch=x64 --out=dist/linux"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^1.7.5"
+    "electron": "^1.7.5",
+    "electron-packager": "^9.0.0"
   },
   "dependencies": {
     "electron-is-dev": "^0.3.0",
