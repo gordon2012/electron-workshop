@@ -2,12 +2,60 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Hello Electron</title>
 </head>
+<style>
+    body, .jumbotron {
+        background: #333;
+    }
+    h2 {
+        color: whitesmoke;
+    }
+</style>
 <body>
-    <h1>Greetings from Electron!</h1>
-    <div id="info"></div>
-    <p><button id="clickme">Click Me</button></p>
+    <div class="jumbotron text-center"><h2>Greetings from Electron with Bootstrap!</h2></div>
+
+    <div class="col-sm-4">
+        <div class="panel">
+            <div class="panel-body">
+                <div id="info"></div>
+                <br>
+                <p><button id="clickme" class="btn btn-lg btn-success">Click Me</button></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-8">
+        <div class="panel">
+            <form class="panel-body">
+                <div class="col-xs-12"><legend>SUBMIT TO MY WILL</legend></div>
+
+                <div class="col-xs-6 form-group">
+                    <label for="Email">Email address</label>
+                    <input type="email" class="form-control" id="Email" placeholder="Email">
+                </div>
+
+                <div class="col-xs-6 form-group">
+                        <label for="Phone">Phone number</label>
+                        <input type="text" class="form-control" id="Phone" placeholder="Phone">
+                    </div>
+
+                <div class="col-xs-6 form-group">
+                    <label for="FName">First Name</label>
+                    <input type="text" class="form-control" id="FName" placeholder="First Name">
+                </div>
+
+                <div class="col-xs-6 form-group">
+                    <label for="LName">Last Name</label>
+                    <input type="text" class="form-control" id="LName" placeholder="Last Name">
+                </div>
+
+                <div class="col-xs-12" style="margin: 15px 0;"><button type="submit" class="btn btn-danger btn-block">Submit</button></div>
+            </form>
+        </div>
+    </div>
+
     <script src="./app.js"></script>
 </body>
 </html>
