@@ -24,6 +24,7 @@
     "electron-packager": "^9.0.0"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "electron-is-dev": "^0.3.0",
     "electron-reload": "^1.2.1"
   }
