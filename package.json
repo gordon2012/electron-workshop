@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron .",
     "package:osx": "electron-packager . --platform=darwin --arch=x64 --out=dist/osx",
-    "package:win64": "electron-packager . --platform=win32 --arch=x64 --out=dist/win64",
+    "package:win64": "electron-packager . --platform=win32 --arch=x64 --out=dist/win64 --ignore=node_modules/.bin",
     "package:win32": "electron-packager . --platform=win32 --arch=ia32 --out=dist/win32",
     "package:linux": "electron-packager . --platform=linux --arch=x64 --out=dist/linux",
     "test": "npm run test:main && npm run test:renderer",
